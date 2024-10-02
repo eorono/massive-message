@@ -44,4 +44,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function routeNotificationForTelegram()
+    {
+        return $this->telegram_user_id; // Assuming you have a telegram_user_id field in your users table
+    }
+
 }
