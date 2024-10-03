@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/send-notification', [NotificationController::class, 'showForm']);
-Route::post('/send-notification', [NotificationController::class, 'sendNotification']);
+Route::get('/send-notification', [NotificationController::class, 'showForm'])->name('send.notification.form');
+Route::post('/send-notification', [NotificationController::class, 'sendNotification'])->name('send.notification');
 
 require __DIR__.'/auth.php';

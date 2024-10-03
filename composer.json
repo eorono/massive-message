@@ -6,8 +6,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "ext-curl": "*",
+        "laravel-notification-channels/discord": "^1.6",
         "laravel-notification-channels/telegram": "^5.0",
         "laravel/framework": "^11.9",
+        "laravel/slack-notification-channel": "^3.3",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
