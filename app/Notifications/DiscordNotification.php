@@ -3,10 +3,10 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Slack\SlackMessage;
 use Illuminate\Notifications\Notification;
+use App\Channels\DiscordChannel;
 
-class SlackNotification extends Notification
+class DiscordNotification extends Notification
 {
     use Queueable;
 
@@ -19,12 +19,11 @@ class SlackNotification extends Notification
 
     public function via($notifiable)
     {
-        return ['slack'];
+        return ['discord'];
     }
 
-    public function toSlack($notifiable)
+    public function toDiscord($notifiable)
     {
-        return (new SlackMessage)
-            ->text($this->message);
+        return $this->message;
     }
 }

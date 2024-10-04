@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('send.notification.form')">
+                        {{ __('Message') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('contacts.index')">
+                        {{ __('Contacts') }}
+                    </x-nav-link>
                 </div>
             </div>
 
